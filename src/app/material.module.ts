@@ -18,7 +18,8 @@ import {
   MatGridListModule,
   MatDialogModule,
   MatSlideToggleModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatTabsModule
 } from '@angular/material';
 
 @NgModule({
@@ -40,7 +41,9 @@ import {
     MatGridListModule,
     MatDialogModule,
     MatSlideToggleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTabsModule
+
   ],
   exports: [
     MatToolbarModule,
@@ -60,7 +63,9 @@ import {
     MatGridListModule,
     MatDialogModule,
     MatSlideToggleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTabsModule
+
   ]
 })
 export class MaterialModule { }

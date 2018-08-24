@@ -1,3 +1,7 @@
+<div *ngIf="!photos.length">
+  <mat-spinner color="warn"></mat-spinner>
+</div>
+
 <mat-grid-list cols="6">
   <mat-grid-tile *ngFor="let photo of photos;" [colspan]="1" [rowspan]="1">
     <mat-card (click)="openDialog(photo.id)">

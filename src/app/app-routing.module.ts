@@ -8,9 +8,14 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { AlbumDetailsComponent } from './album-details/album-details.component';
 import { BotinakComponent } from './botinak/botinak.component';
+import { HomeComponent } from './home/home.component';
+import { BlogComponent } from './blog/blog.component';
+import { PostsComponent } from './blog/posts/posts.component';
+import { UsersComponent } from './blog/users/users.component';
+import { TodosComponent } from './blog/todos/todos.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'table', pathMatch: 'full'},
+  { path: '', component: HomeComponent },
   { path: 'table', component: TableComponent },
   { path: 'list', component: ListComponent },
   { path: 'panel', component: PanelComponent },
@@ -18,7 +23,15 @@ const routes: Routes = [
   { path: 'user-details/:id', component: UserDetailsComponent },
   { path: 'albums', component: AlbumsComponent },
   { path: 'album/:albumId', component: AlbumDetailsComponent },
-  { path: 'botinak', component: BotinakComponent }
+  { path: 'botinak', component: BotinakComponent },
+  { path: 'blog', component: BlogComponent,
+    children: [
+      { path: '', redirectTo: 'posts', pathMatch: 'full' },
+      { path: 'posts', component: PostsComponent },
+      { path: 'users', component: UsersComponent },
+      { path: 'todos', component: TodosComponent },
+    ]
+  },
 ];
 
 @NgModule({

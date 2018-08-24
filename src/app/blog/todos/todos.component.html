@@ -1,0 +1,7 @@
+<div *ngIf="!todos">
+  <mat-spinner color="warn"></mat-spinner>
+</div>
+
+<p *ngFor="let todo of todos">
+  {{ todo.title }}
+</p>

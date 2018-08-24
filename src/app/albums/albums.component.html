@@ -1,3 +1,7 @@
+<div *ngIf="!albums">
+  <mat-spinner color="warn"></mat-spinner>
+</div>
+
 <mat-nav-list>
   <h3 mat-subheader>Albums</h3>
   <mat-list-item *ngFor="let album of albums">

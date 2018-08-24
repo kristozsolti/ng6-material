@@ -19,6 +19,9 @@ import { AlbumsComponent } from './albums/albums.component';
 import { AlbumDetailsComponent } from './album-details/album-details.component';
 import { BotinakComponent } from './botinak/botinak.component';
 import { DialogComponent } from './album-details/dialog/dialog.component';
+import { HomeComponent } from './home/home.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogModule } from './blog/blog.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { DialogComponent } from './album-details/dialog/dialog.component';
     AlbumsComponent,
     AlbumDetailsComponent,
     BotinakComponent,
-    DialogComponent
+    DialogComponent,
+    HomeComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,8 @@ import { DialogComponent } from './album-details/dialog/dialog.component';
     LayoutModule,
     MaterialModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BlogModule
   ],
   providers: [],
   bootstrap: [AppComponent],

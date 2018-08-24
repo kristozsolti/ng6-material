@@ -1,0 +1,33 @@
+<div *ngIf="!posts">
+  <mat-spinner color="warn"></mat-spinner>
+</div>
+
+<mat-accordion *ngFor="let post of posts">
+  <mat-expansion-panel #postPanel (opened)="postPanel.panelOpenState = true" (closed)="postPanel.panelOpenState = false" [style.background-color]="postPanel.panelOpenState ? '#c6cfff' : '#fff'">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <strong>
+          {{ post.title | uppercase }}
+        </strong>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>By: Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Date</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{ post.body }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>
+          <mat-icon>comment</mat-icon>
+          Show comments</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </mat-expansion-panel>
+</mat-accordion>

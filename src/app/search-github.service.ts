@@ -6,7 +6,6 @@ import { filter } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class SearchGithubService {
-  users: any;
 
   constructor(private http: HttpClient) { }
 

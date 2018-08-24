@@ -1,0 +1,7 @@
+<div *ngIf="!users">
+    <mat-spinner color="warn"></mat-spinner>
+  </div>
+  
+  <p *ngFor="let user of users">
+    {{ user.name }}
+  </p>
