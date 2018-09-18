@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {
   MatToolbarModule,
   MatButtonModule,
@@ -19,7 +18,9 @@ import {
   MatDialogModule,
   MatSlideToggleModule,
   MatProgressSpinnerModule,
-  MatTabsModule
+  MatTabsModule,
+  MatSnackBarModule,
+  MatMenuModule
 } from '@angular/material';
 
 @NgModule({
@@ -42,7 +43,9 @@ import {
     MatDialogModule,
     MatSlideToggleModule,
     MatProgressSpinnerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSnackBarModule,
+    MatMenuModule
 
   ],
   exports: [
@@ -64,7 +67,9 @@ import {
     MatDialogModule,
     MatSlideToggleModule,
     MatProgressSpinnerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSnackBarModule,
+    MatMenuModule
 
   ]
 })

@@ -14,7 +14,7 @@ export class MenuItemsService {
       { link: '/list',    icon: 'perm_media',   label: 'File List'        },
       { link: '/panel',   icon: 'payment',      label: 'Expansion Panel'  },
       { link: '/albums',  icon: 'image',        label: 'Albums'           },
-      { link: '/blog',    icon: 'face',         label: 'Blog'             },
+
     ];
   }
 }

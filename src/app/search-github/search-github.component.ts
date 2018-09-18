@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchGithubService } from '../search-github.service';
 import { filter } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-github',
@@ -12,7 +13,7 @@ export class SearchGithubComponent implements OnInit {
   username: string;
   filteredUsers: any;
 
-  constructor(private searchService: SearchGithubService) { }
+  constructor(private searchService: SearchGithubService, private router: Router) { }
 
   ngOnInit() {
     this.searchService.getAllUser().subscribe(
@@ -27,6 +28,10 @@ export class SearchGithubComponent implements OnInit {
     this.filteredUsers = this.allUsers.filter(
       user => user.login.includes(username)
     );
+  }
+
+  openUser(id: number) {
+    this.router.navigate(['/user-details', id])
   }
 
 }

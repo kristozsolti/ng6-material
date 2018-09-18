@@ -13,6 +13,7 @@ import { BlogComponent } from './blog/blog.component';
 import { PostsComponent } from './blog/posts/posts.component';
 import { UsersComponent } from './blog/users/users.component';
 import { TodosComponent } from './blog/todos/todos.component';
+import { BlogUserDetailsComponent } from './blog/users/blog-user-details/blog-user-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'posts', pathMatch: 'full' },
       { path: 'posts', component: PostsComponent },
       { path: 'users', component: UsersComponent },
+      { path: 'users/:userId', component: BlogUserDetailsComponent },
       { path: 'todos', component: TodosComponent },
     ]
   },
